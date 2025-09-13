@@ -8,6 +8,23 @@ Install dependencies with:
 pip install "gymnasium[box2d]" stable-baselines3
 ```
 
+## Environment Details
+- **State space:** 8 continuous variables
+  -  x position
+  -  y position
+  -  x velocity
+  -  y velocity
+  -  lander angle
+  -  angular velocity
+  -  left leg contact (0 or 1)
+  -  right leg contact (0 or 1)  
+
+- **Action space:** 4 discrete actions  
+  - 0: Do nothing  
+  - 1: Fire left orientation engine  
+  - 2: Fire main engine  
+  - 3: Fire right orientation engine
+
 ## Files
 - **LL2D.py** – trains a DQN agent on `LunarLander-v3` with evaluation and model saving.  
 - **watch_lander.py** – loads a trained model and plays multiple episodes with live rendering.   
